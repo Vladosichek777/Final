@@ -1,0 +1,95 @@
+@use "sass:map";
+@use "variables" as*;
+
+.partners {
+
+    &__inner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__title {
+        @include fontsSetting (700, 17px);
+        font-size:map.get($font-size, "small_title");
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #323264;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__flex__inner {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+    }
+}
+.hillel {
+    background-color: #1C4280;
+}
+.wanna {
+    background: #143646;
+}
+.targerine {
+    background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+}
+.DLOOk {
+    background-color: #9E4DC3;
+}
+.oranger {
+    background-color: #FD9339;  
+}
+.adtelligent {
+    background-color: #E2E2E4;
+}
+.Clickky {
+background-color: #C71C36;
+}
+.ecolease {
+    background-color: #DCF3F9;
+}
+.InfaTek {
+    background-color: #EAEAEA;
+}
+.SityPark {
+    background-color: #282240;
+}
+.art-print {
+    background-color: #1D4568;
+}
+.ultimateCard {
+    background-color: #000000;
+}
+
+ .add {
+     display: none;
+     }
+
+@media(min-width:650px) {
+    .add {
+        display: flex;
+    }
+    .partners__item {
+        max-width: 33.3333%;
+    }
+}
+
+@media(min-width:1020px) {
+    .partners__item {
+        max-width: 25%;
+    }
+}
+
+@media(min-width:1800px) {
+    
+.container-partners {
+    padding: 0 30px;
+}
+}
