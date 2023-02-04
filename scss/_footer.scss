@@ -1,0 +1,147 @@
+@use "sass:map";
+@import "variables";
+
+.footer {
+
+    &__inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__line {
+        background-color: #E6E6F0;
+        height: 2px;
+        margin-bottom: 30px;
+    }
+    &__top {
+        margin-bottom: 21px;
+        p {
+            @include fontsSetting (400, 20px);
+            font-size:map.get($font-size, "service-text");
+            color: #323264;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        &__map {
+            @include fontsSetting (700, 15px);
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #24A3FF;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__bottom {
+        a {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+        }
+        &__logo {
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+
+    &__numb {
+        @include fontsSetting (700, 20px);
+        font-size:map.get($font-size, "service-text");
+        color: #46466E;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    &__gmail {
+        @include fontsSetting (700, 20px);
+        font-size:map.get($font-size, "service-text");
+        color: #24A3FF;
+        text-decoration: none;
+        margin-bottom: 30px;
+    }
+
+    &__rights {
+        @include fontsSetting (400, 20px);
+        font-size:map.get($font-size, "service-text");
+        color: #B3B3BA;
+        text-align: center;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
+
+@media(min-width:700px) {
+    .footer {
+        &__top {
+            display: flex;
+            align-items: center;
+            p {
+                margin-bottom: 0;
+            }
+            &__item {
+                display: flex;
+                align-items: center;
+            }
+            &__item:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &__item:not(:last-child)::after {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                background-color: #B3B3BA;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+        }
+        &__bottom {
+            display: flex;
+            align-items: center;
+            &__logo {
+                margin-bottom: 0;
+            }
+
+            &__item:not(:last-child) {
+                margin-right: 13px;
+            }
+
+            &__item:not(:last-child)::after {
+                content: "";
+                display: block;
+                width: 6px;
+                height: 6px;
+                background-color: #B3B3BA;
+                border-radius: 50%;
+                margin-left: 13px;
+            }
+
+        }
+        &__numb {
+            margin-bottom: 0;
+        }
+    
+        &__gmail {
+            margin-bottom: 0;
+        }
+
+        &__flex {
+            position: relative;
+        }
+        &__rights {
+            position: absolute;
+            top: 32px;
+            right: 0;
+        }
+    }
+    a.footer__bottom__item {
+        display: flex;
+        align-items: center;
+    }
+}
+

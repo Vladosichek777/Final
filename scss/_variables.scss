@@ -1,4 +1,4 @@
-$font-size: ("small_title": 14px, "service-text":16px, "regular":18px,"normal":20px, "medium":22px, "big_title":30px, );
+$font-size: ("small_title": 14px, "service-text":16px, "regular":18px,"normal":20px, "medium":22px, "big_title":30px, "grande_title":38px );
 
 @mixin fontsSetting ($font-weight,$lh) {
     font-weight: $font-weight;

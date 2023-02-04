@@ -1,0 +1,119 @@
+@use "sass:map";
+@import "variables";
+
+.person {
+
+    &__inner {
+        padding-top: 50px;
+    }
+
+    &__img{
+        font-size: 0;
+        
+    }
+
+    &__info {
+        padding: 30px;
+        background-color: #F5F5FA;
+        border-radius: 12px;
+    }
+
+    &__title {
+        @include fontsSetting (700, 17px);
+        font-size:map.get($font-size, "small_title");
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #24A3FF;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-bottom: 5px;
+    }
+    &__title::after {
+        content: "";
+        background-image: url(../assets/svg/Arrow.svg);
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 2px;
+    }
+
+    &__text {
+        @include fontsSetting (700, 37px);
+        font-size:map.get($font-size, "big_title");
+        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-bottom: 30px;
+    }
+
+    &__author {
+        @include fontsSetting (700, 20px);
+        font-size:map.get($font-size, "service-text");
+        color: #B3B3BA;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-bottom: 6px;
+
+        &__sub {
+            @include fontsSetting (400, 22px);
+            font-size:map.get($font-size, "small_title");
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #B3B3BA;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        button {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #24A3FF;
+            opacity: 0.2;
+            padding: 0;
+            border:none;
+        }
+        button:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+    .active {
+        background-color: #24A3FF;
+        opacity: 1;
+    }
+}
+
+
+
+@media(min-width:1000px) {
+    .person {
+        &__flex {
+            display: flex;
+        }
+
+        &__text {
+            @include fontsSetting (700, 46px);
+            font-size:38px;
+        }
+    }
+}
+
+
+@media(min-width:1400px) {
+    .person {
+        &__text {
+            font-size:37px;
+        }
+        &__inner {
+            padding-top: 80px;
+        }
+    }
+}
