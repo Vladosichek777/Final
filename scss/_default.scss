@@ -14,8 +14,20 @@ body {
     padding: 0 30px;
 }
 
+.container-beenfits {
+    max-width:1360px ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+}
+
 .container-partners {
     max-width: 1720px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.wrapper__background {
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
 }
