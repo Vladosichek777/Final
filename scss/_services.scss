@@ -3,22 +3,16 @@
 @use "variables" as*;
 .services {
         &__title {
-            @include fontsSetting (700, 17px);
-            font-size:map.get($font-size, "small_title");
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #24A3FF;
-            margin-block-start:0;
-            margin-block-end: 0;
             margin-bottom: 10px;
-        }
-        &__title::after {
-            content: "";
+
+            &::after {
+                content: "";
             background-image: url(../assets/svg/Arrow.svg);
             display: inline-block;
             width: 12px;
             height: 12px;
             margin-left: 2px;
+            }
         }
 
         &__subtitle {
@@ -37,18 +31,19 @@
             flex-wrap: wrap;
             padding-top: 30px;
             padding-bottom: 60px;
-        }
 
-        &__cards__item:not(:last-child) {
-            margin-bottom: 30px;
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
         }
-
-        
     }
+
 .services__wrapper {
     position: relative;
-}
-.services__wrapper::after{
+
+    &::after {
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -60,20 +55,21 @@
     height: 10px;
     background-color: #CACADB;
     border-radius: 0px 0px 12px 12px;
-}
+    }
 
- .services__wrapper:before{
-     position: absolute;
-     bottom: -10px;
-     left: 50%;
-     transform: translate(-50%, 100%);
-     content: "";
-     display: block;
-     width: 78.66666%;
-     height: 10px;
-     background-color: #E7E7F2;
-    border-radius: 0px 0px 12px 12px;
- }
+    &::before {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        content: "";
+        display: block;
+        width: 78.66666%;
+        height: 10px;
+        background-color: #E7E7F2;
+       border-radius: 0px 0px 12px 12px;
+    }
+}
 
     .cards__item {
             &__title {
@@ -159,20 +155,18 @@
 
         &__cards {
             padding-top: 60px;
-        }
-        
 
-        &__cards__item {
-            max-width: calc(50% - 30px);
-        }
+            &__item {
+                max-width: calc(50% - 30px);
 
-        &__cards__item:not(:last-child) {
-            margin-bottom: 0;
-        }
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
 
-
-        &__cards__item:nth-last-child(n + 3) {
-            margin-bottom: 60px;
+                &:nth-last-child(n + 3) {
+                    margin-bottom: 60px;
+                }
+            }
         }
     }
    }
@@ -182,15 +176,15 @@
     .services {
     
         &__cards__item {
-        max-width: calc(33.3333% - 40px);
-        }
+            max-width: calc(33.3333% - 40px);
 
-        &__cards__item:nth-last-child(n + 3) {
-            margin-bottom: 0;
-        }
-        
-        &__cards__item:nth-last-child(n + 4) {
-            margin-bottom: 60px;
+            &:nth-last-child(n + 3) {
+                margin-bottom: 0;
+            }
+
+            &:nth-last-child(n + 4) {
+                margin-bottom: 60px;
+            }
         }
     }
    }

@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "variables" as*;
+
+.breadCrumbs {
+    @include fontsSetting (700, 17px);
+    font-size:map.get($font-size, "small_title");
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24A3FF;
+    margin-block-start:0;
+    margin-block-end: 0;
+
+    &:hover {
+        color: #F0145A;
+    }
+}

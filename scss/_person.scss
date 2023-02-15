@@ -19,22 +19,16 @@
     }
 
     &__title {
-        @include fontsSetting (700, 17px);
-        font-size:map.get($font-size, "small_title");
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #24A3FF;
-        margin-block-start: 0;
-        margin-block-end: 0;
         margin-bottom: 5px;
-    }
-    &__title::after {
-        content: "";
-        background-image: url(../assets/svg/Arrow.svg);
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        margin-left: 2px;
+
+        &::after {
+            content: "";
+            background-image: url(../assets/svg/Arrow.svg);
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-left: 2px;
+        }
     }
 
     &__text {
